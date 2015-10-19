@@ -1,0 +1,30 @@
+This is Logic Warehouse library for Java - a collection of reusable datastructures and algorithms for first order predicate logic (FOL).
+
+The datastructures include representations for:
+-- atomic formulas and literals;
+-- connectives;
+-- arbitrary FOL formulas;
+-- symbols: variables, individual constants, function and predicate constants, connectives and quantifiers;
+-- terms (tree-like terms and flatterms);
+-- substitutions;
+-- weight polynomials.
+
+
+The algorithms and relevant abstractions include:
+-- one-to-one forward and backward subsumption tests on clauses (lists of literals);
+-- propositional factoring and tautology tests on clauses (lists of literals);
+-- clustered unification indexing;
+-- feature vector indexing;
+-- flatterm and tree-like term assembly;
+-- variable renaming;
+-- reduction and literal orderings;
+-- non-recursive Knuth-Bendix ordering; 
+-- subterm relation as reduction ordering; 
+-- unification;
+-- heuristic unifiability estimation;
+-- weight computation.
+
+
+
+Project maintainer: Alexandre Riazanov, alexandre.riazanov@gmail.com
+

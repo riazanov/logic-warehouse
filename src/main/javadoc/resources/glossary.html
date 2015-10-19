@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+   
+   Copyright © 2007 Andrei Tchaltsev.
+   All rights reserved.
+
+-->
+</head>
+<body bgcolor="white">
+
+<br><br>
+
+<center> 
+<font size=5> 
+<b>Glossary of terms for the Logic Warehouse Library (JE)</b>
+</center>
+</font>
+
+<br><br><br>
+
+
+<center><font size=5><b>A</b></font></center> <br>
+
+
+<center><font size=5><b>B</b></font></center> <br>
+
+  <li> <a name="backward_paramodulation"><b>Backward paramodulation</b>.
+  We consider two modes in which paramodulation is applied.
+  In the backward mode, the <a href="#candidate_redex">candidate redexes</a>
+  are in a database (index)
+  and the positive equality to 
+  <a href="#paramodulation_from_into">paramodulate from</a>
+  acts as a query.
+  In <a href="#forward_paramodulation">forward paramodulation</a>,
+  the positive equalities to paramodulate from are in a databse,
+  and the candidate redex term acts as a query.
+  <em>The distinction is purely technical</em>,
+  the semantics of paramodulation is not affected. 
+
+
+
+  <li> <a name="candidate_redex"><b>Candidate redex</b> is a term that
+  is identified as a potential <a href="#redex">redex</a> in paramodulation
+  or demodulation inferences.
+
+<center><font size=5><b>C</b></font></center> <br>
+     
+  <li> <a name="complex_literal"><b>Complex literals</b> are those literals
+  whose atoms are not atomic formulas, ie, they are applications
+  of quantifiers or conjunctions. In Alabai, all complex literals
+  are considered positive even if the corresponding atoms are applications
+  of negation. See also <a href="#ordinary_literal">ordinary literal</a>.
+
+
+<center><font size=5><b>F</b></font></center> <br>
+
+
+  <li> <a name="forward_paramodulation"><b>Forward paramodulation</b>.
+  We consider two modes in which paramodulation is applied.
+  In the forward mode, the positive equality to 
+  <a href="#paramodulation_from_into">paramodulate from</a>
+  is taken from the database (index) and 
+  the <a href="#candidate_redex">candidate redex</a> term
+  acts as a query. 
+  In <a href="#backward_paramodulation">backward paramodulation</a>,
+  the positive equality acts a query, and the candidate redexes are
+  in a database (index). <em>The distinction is purely technical</em>,
+  the semantics of paramodulation is not affected. 
+
+
+<center><font size=5><b>G</b></font></center> <br>
+
+  <li> <a name="gamma_substitution"><b>Gamma-substitution</b> is 
+  any substitution &theta, such that for every variable x, 
+  x&theta is a constant or a variable, and if x and y are distinct
+  variables and x&theta and y&theta are variables, then 
+  x&theta and y&theta are distinct.
+ 
+<center><font size=5><b>P</b></font></center> <br>
+
+  <li> <a name="paramodulation_from_into"> 
+  <b>Paramodulation from ... into ...</b>
+  Given an application of paramodulation between the clauses 
+  <code>C \/ s = t and D[s]</code>, resulting in <code>C \/ D[t]</code>, 
+  we say that we <em>paramodulate from</em> the positive equality s = t 
+  <em>into</em> the clause <code>D[s]</code>.
+
+
+<center><font size=5><b>R</b></font></center> <br>
+
+  <li> <a name="redex"> <b>Redex</b>.
+  Given an application of paramodulation between the clauses 
+  <code>C \/ s = t</code> and <code>D[s]</code>, resulting in 
+  <code>C \/ D[t]</code>, we say that the term 
+  <code>s</code> acts as a <em>redex</em> in this inference. 
+  Similarly, in the demodulation
+  between <code>s = t</code> and <code>D[s]</code>, <code>s</code> 
+  is the redex.
+
+ 
+<center><font size=5><b>S</b></font></center> <br>
+
+  <li> <a name="shallow_weight"> <b>Shallow weight</b> of a term is 
+  a weight polynomial which is computed just like regular weight
+  except that only symbols down to some specified depth are considered.
+  Comparison of terms by their shallow weights is stable w.r.t.
+  <a href="#gamma_substitution">gamma-substitutions</a>.
+
+</body>
+</html>
